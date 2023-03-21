@@ -12,19 +12,23 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
-
-
     "commands": [
       {
-        "command": "python.runFile",
-        "title": "Run python file",
-        "enablement": "editorLangId == 'python' && editorTextFocus"
+        "command": "new-extension.helloWorld",
+        "title": "Hello world 0"
       }
-    ]
-
-
-
+    ],
+    "menus": {
+      "editor/lineNumber/context": [
+        {
+          "command": "new-extension.helloWorld"
+        }
+      ]
+    }
   },
+  "enabledApiProposals": [
+    "contribEditorLineNumberMenu"
+  ],
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
