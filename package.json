@@ -11,20 +11,17 @@
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
+
   "contributes": {
-
-
     "commands": [
       {
-        "command": "python.runFile",
-        "title": "Run python file",
-        "enablement": "editorLangId == 'python' && editorTextFocus"
+        "command": "new-extension.helloWorld",
+        "title": "Hello world",
+        "when": "myNewFeature == 'typescript'"
       }
     ]
-
-
-
   },
+
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
